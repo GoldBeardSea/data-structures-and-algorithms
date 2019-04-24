@@ -63,7 +63,9 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = (people) => {
-  // Solution code here...
+  for (let obj of people) {
+    obj.isAuthor = true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,7 +84,9 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 const append = (arr1, arr2) => {
-  // Solution code here...
+  for (let value of arr2) {
+    arr1.push(value);
+  }
 
 };
 
