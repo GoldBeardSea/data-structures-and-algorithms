@@ -60,7 +60,7 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  return arr.sort(function(a, b){return a.price - b.price;});
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
+  return arr.sort(function(a, b){return a.toString().length - b.toString().length;});
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
+  return arr.sort(function(a, b){return a.lastName.localeCompare(b.lastName);});
 };
 
 /* ------------------------------------------------------------------------------------------------
