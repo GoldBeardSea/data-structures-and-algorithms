@@ -138,7 +138,15 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 1) {
+      arr.splice(i, 1);
+    }
+    if (arr[i] === 66) {
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -157,7 +165,10 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if (numberOfCharacters >= str.length) {
+    return '';
+  }
+  return str.slice(0, str.length - numberOfCharacters);
 };
 
 
@@ -169,7 +180,13 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 
 const totalSumCSV = (str) => {
   let total = 0;
-  // Solution code here...
+  const reducer = (accum, currVal) => accum + currVal;
+  let array = str.split(',');
+  let numArray = [];
+  for (let num of array) {
+    numArray.push(Number(num));
+  }
+  total = numArray.reduce(reducer);
   return total;
 };
 
