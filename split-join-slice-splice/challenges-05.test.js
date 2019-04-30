@@ -22,6 +22,7 @@ const howMuchPencil = (str) => {
   }
   return result;
 };
+// I thought the question asked for splice
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -87,6 +88,18 @@ const listFoods = (recipe) => {
   return result;
 };
 
+const listFoodsTwo = (recipe) => {
+  let result = [];
+  for (let string of recipe.ingredients) {
+    let indexOfOne = string.indexOf(' ', string.indexOf(' ') + 1);
+    let ingredient = string.slice(0, string.length);
+    result.push(ingredient);
+  }
+  return result;
+};
+
+//
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -141,13 +154,13 @@ const removeEvenValues = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 !== 1) {
       arr.splice(i, 1);
-    }
-    if (arr[i] === 66) {
-      arr.splice(i, 1);
+      i--;
     }
   }
   return arr;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -200,7 +213,7 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
