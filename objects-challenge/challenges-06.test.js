@@ -109,15 +109,16 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   for (let obj of arr) {
-    if (obj.name === character) {
-      if(obj.children !== []) {
-        console.log(obj.name);
-        return true;
-      }
+    let conditionOne = obj.name === character;
+    let conditionTwo = obj.children.length;
+    if (conditionOne=== true && conditionTwo > 0) {
+      return true;
+    }
+    if (conditionOne === true && conditionTwo === 0) {
+      return false;
     }
   }
 };
-// not done
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
