@@ -69,11 +69,10 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  let holder = arr.reduce( (acc, val, idx) => {
+  return arr.reduce( (acc, val) => {
     acc.push( val.name );
     return acc;
   }, [] );
-  return holder;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,7 +84,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
-  return arr.split('').reduce((accum, val, idx) => {
+  return arr.split('').reduce((accum, val) => {
     accum.unshift(val);
     return accum;
   }, []).join('');
@@ -141,7 +140,7 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  let holder = arr.reduce( (acc, val, idx) => {
+  return arr.reduce( (acc, val) => {
     if (val.children !== undefined) {
       acc.push( val.children );
     }
@@ -151,8 +150,7 @@ const countNumberOfChildren = (arr) => {
       return accumulator.concat(currentValue);
     },
     []
-  );
-  return holder.length;
+  ).length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -164,9 +162,9 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  return arr.reduce((count, sum, idx) => {
+  return arr.reduce((count, sum) => {
     return count + sum;
-  })[0]/2;
+  })/arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -187,7 +185,13 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce((num, accum) => {
+    if (isPrime(accum) === true) {
+      return num + 1;
+    } else {
+      return num;
+    }
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
