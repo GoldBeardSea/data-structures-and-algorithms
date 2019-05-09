@@ -48,7 +48,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  return input.map(element => (element).filter(num => !isNaN(num) && !(num % 5)).map(ele => Math.pow(2, ele)));
+  return input.map((arr) => arr.filter(item => typeof item === 'number' && !(item % 5)).map(ele => Math.pow(2, ele)));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +134,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-
+  return data.reduce((highestSoFar, comparisonHeight) => parseInt(comparisonHeight.height) < parseInt(highestSoFar.height) ? comparisonHeight : highestSoFar).name;
 };
 
 /* ------------------------------------------------------------------------------------------------
