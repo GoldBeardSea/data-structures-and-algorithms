@@ -45,7 +45,7 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  return str.split('').filter(character => character % 2 !== 0 || character.charCodeAt(0) % 2 === 0).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  return arr.map(string => string.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
