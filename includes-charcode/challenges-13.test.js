@@ -45,7 +45,7 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  return str.split('').filter(character => character % 2 !== 0 || character.charCodeAt(0) % 2 === 0).join('');
+  return str.split('').filter(character => character % 2 === 0 || character.charCodeAt(0) % 2 === 0).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
