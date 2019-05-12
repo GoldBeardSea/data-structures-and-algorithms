@@ -53,7 +53,6 @@ const salesData = (hours, data) => {
     let returnedObj = {};
     returnedObj['sales'] = `${element} cookies`;
     returnedObj['time'] = hours[indx];
-    console.log(returnedObj);
     result.push(returnedObj);
   });
   return result;
@@ -78,7 +77,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -100,7 +99,11 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  if(board[row][col].includes('#')){
+    return 'hit';
+  } else {
+    return 'miss';
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,7 +115,7 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  return numbers.reduce((flatten, thisArray) => flatten.concat(thisArray),[] ).reduce((accumProd, nextValue) => accumProd * nextValue);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,7 +135,7 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  return weather.reduce((flatten, thisArray) => flatten.concat(thisArray),[] ).reduce((accumTemp, nextValue) => accumTemp + nextValue)/28;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -152,9 +155,7 @@ let lowestWeeklyTemperatureData = [
   [65, 56, 55, 52, 55, 62, 57],
 ];
 
-const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
-};
+const lowestWeeklyAverage = (weather) => weather.map(array => array.reduce((prevVal, currentVal) => prevVal + currentVal)/7).reduce((pVal, cVal) => Math.min(pVal, cVal));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
@@ -169,7 +170,7 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+  return str.split('\n').map(splitParse => splitParse.split(',').map(string => parseInt(string)).reduce((sum, current) => sum + current));
 };
 
 /* ------------------------------------------------------------------------------------------------
