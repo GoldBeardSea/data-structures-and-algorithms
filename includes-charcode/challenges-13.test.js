@@ -45,7 +45,11 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  return str.split('').filter(character => character % 2 === 0 || character.charCodeAt(0) % 2 === 0).join('');
+  return str.split('').filter((value, index) => {
+    if (index%2) {
+      return value;
+    }
+  }).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +59,7 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  return arr.map(string => string.includes(':)'));
+  return arr.every((string) => string.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +69,7 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  return arr.filter(string => string.includes(target));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,7 +79,7 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  return arr.every((comparison) => comparison.includes(target));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,7 +95,7 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.map(arrayOfString => arrayOfString.filter(string => !(string.includes('Brook'))));
 };
 
 /* ------------------------------------------------------------------------------------------------
