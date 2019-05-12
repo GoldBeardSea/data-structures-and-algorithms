@@ -53,7 +53,6 @@ const salesData = (hours, data) => {
     let returnedObj = {};
     returnedObj['sales'] = `${element} cookies`;
     returnedObj['time'] = hours[indx];
-    console.log(returnedObj);
     result.push(returnedObj);
   });
   return result;
@@ -100,7 +99,11 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  if(board[row][col].includes('#')){
+    return 'hit';
+  } else {
+    return 'miss';
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,7 +115,7 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  return numbers.reduce((flatten, thisArray) => flatten.concat(thisArray),[] ).reduce((accumProd, nextValue) => accumProd * nextValue);
 };
 
 /* ------------------------------------------------------------------------------------------------
