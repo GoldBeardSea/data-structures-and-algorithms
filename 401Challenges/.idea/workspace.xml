@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="857f6727-3992-4ab2-b11e-c9abd6295780" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/Challenges/ArrayShiftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Challenges/ArrayShiftTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="857f6727-3992-4ab2-b11e-c9abd6295780" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -42,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Challenges/ArrayShiftTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+            <state relative-caret-position="234">
+              <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Challenges/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -274,6 +272,12 @@
     <history-entry file="ArrayShiftTest_testShiftArray_negative - 2019.05.29 at 12h 03m 31s.xml">
       <configuration name="ArrayShiftTest.testShiftArray_negative" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ArrayShiftTest_testShiftArray_nullArray - 2019.05.29 at 12h 29m 16s.xml">
+      <configuration name="ArrayShiftTest.testShiftArray_nullArray" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayShiftTest_testShiftArray_nullArray - 2019.05.29 at 12h 29m 41s.xml">
+      <configuration name="ArrayShiftTest.testShiftArray_nullArray" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="775" extended-state="0" />
@@ -324,20 +328,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Challenges/ArrayShiftTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Challenges/LibraryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" column="5" selection-start-line="9" selection-start-column="10" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Challenges/ArrayShiftTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
