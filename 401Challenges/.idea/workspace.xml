@@ -194,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayShiftTest.testShiftArray_negative">
+  <component name="RunManager" selected="JUnit.ArrayShiftTest.testShiftArray_nullArray">
     <configuration name="ArrayShiftTest.testShiftArray_even" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="401Challenges.test" />
       <extension name="coverage">
@@ -227,8 +227,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ArrayShiftTest.testShiftArray_nullArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="401Challenges.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Challenges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Challenges" />
+      <option name="MAIN_CLASS_NAME" value="Challenges.ArrayShiftTest" />
+      <option name="METHOD_NAME" value="testShiftArray_nullArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArrayShiftTest.testShiftArray_nullArray" />
         <item itemvalue="JUnit.ArrayShiftTest.testShiftArray_negative" />
         <item itemvalue="JUnit.ArrayShiftTest.testShiftArray_even" />
       </list>

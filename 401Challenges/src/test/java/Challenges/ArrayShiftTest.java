@@ -34,10 +34,9 @@ public class ArrayShiftTest {
 
     @Test(expected = NullPointerException.class)
     public void testShiftArray_nullArray() {
-        int[] testArray = {};
+        int[] testArray = null;
         int num = 17;
-        int[] expectedArray = {-1, -5, -6, 17, -1, -2, -5};
-        int[] actual = ArrayShift.insertShiftArray(testArray, num);
-        assertArrayEquals(expectedArray, actual);
+        ArrayShift.insertShiftArray(testArray, num);
+
     }
 }
