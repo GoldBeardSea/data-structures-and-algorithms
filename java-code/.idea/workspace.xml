@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41cee52b-8b40-40a8-9627-174f0c3727fa" name="Default Changelist" comment="" />
+    <list default="true" id="41cee52b-8b40-40a8-9627-174f0c3727fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../401Challenges/src/main/java/Challenges/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../401Challenges/src/test/java/Challenges/BinarySearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../individual-readmes/BinaryShift.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../401Challenges/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../401Challenges/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />

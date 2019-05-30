@@ -1,0 +1,3 @@
+For this problem my overall approach was to use the pointers Start and End with an additional middle pointer in a while loop to keep track over our indices in the array. Progressively checking the middle while diving it in two, until the item is found at the middle pointer, or if not, returns -1.
+
+![alt text](https://raw.githubusercontent.com/GoldBeardSea/data-structures-and-algorithms/master/assets/BinarySearch.jpg "White Board")
