@@ -4,6 +4,7 @@ package Challenges.linkedlist;
 public class LinkedList {
 
     public ListNode root;
+    public ListNode current;
 
     public LinkedList() {
         this.root = null;
@@ -16,7 +17,7 @@ public class LinkedList {
     public int size() {
         int total = 0;
 
-        ListNode current = this.root;
+        current = this.root;
         while (current != null) {
             total++;
             current = current.next;
@@ -26,7 +27,7 @@ public class LinkedList {
 
     public ListNode appends(int newValue) {
         ListNode newNodeValue = new ListNode(newValue);
-        ListNode current = this.root;
+        current = this.root;
         if(current == null){
             current = newNodeValue;
             return current;
@@ -39,35 +40,44 @@ public class LinkedList {
         return newNodeValue;
     }
 
-    public void insertBefore(int value, int newVal) {
+    public void insertAfter(int inListVal, int insertVal) {
         try {
-            ListNode newValue = new ListNode(newVal);
-            ListNode current = this.root;
+            ListNode newValue = new ListNode(insertVal);
+            current = this.root;
 
-            while (current.data != value) {
+            while (current.data != inListVal) {
                 current = current.next;
             }
             newValue.next = current.next;
             current.next = newValue;
         } catch (NullPointerException e) {
-            System.out.println("You have reached the end of the list.");
+            System.out.println("End of the List.");
         }
     }
 
-    public void insertAfter(ListNode targetNode, int insertVal) {
-        if (targetNode == null) {
-            System.out.println("The given previous node cannot be null");
+    public void insertBefore(int inListVal, int insertVal) {
+        ListNode insertedNode = new ListNode(insertVal);
+        current = this.root;
+
+        if(this.root == null){
+            System.out.println("Empty list");
             return;
         }
-        ListNode insertedNode = new ListNode(insertVal);
-        insertedNode.next = targetNode.next;
-        targetNode.next = insertedNode;
+        if (this.root.data == inListVal){
+            this.appends(inListVal);
+        }
+
+        while (current.next !=null && current.next.data != inListVal) {
+            current = current.next;
+        }
+        insertedNode.next = current.next;
+        current.next = insertedNode;
     }
 
     public void insert(int data) {
-        ListNode nn = new ListNode(data);
-        nn.next = this.root;
-        this.root = nn;
+        ListNode newNode = new ListNode(data);
+        newNode.next = this.root;
+        this.root = newNode;
     }
 
     public boolean contains(int val) {
@@ -82,21 +92,24 @@ public class LinkedList {
                 seen = true;
                 return seen;
             }
+            iterator = iterator.next;
         }
 
         return seen;
     }
 
-    public void printList() {
+    public String printList() {
+        StringBuilder theBuilder = new StringBuilder();
         if (root == null) {
-            System.out.print("<");
-            System.out.print(">");
+            theBuilder.append("< Null >");
+            return theBuilder.toString();
         } else {
             ListNode temp = root;
-            System.out.print("<");
+            theBuilder.append("<");
             while (temp != null) {
                 if (temp == this.root) {
-                    System.out.print("[" + temp.data + "]" + "-->");
+                    String insert = "[" + temp.data + "]" + "-->";
+                    theBuilder.append(insert);
                 } else {
                     System.out.print("[" + temp.data + "]");
                     System.out.print("-->");
