@@ -6,6 +6,17 @@ import static org.junit.Assert.*;
 
 public class LinkedListTest {
 
+
+    @Test
+    public void size_test() {
+        LinkedList newLinkedList = new LinkedList();
+        ListNode testNode = new ListNode(8);
+        ListNode testNodeTwo = new ListNode(9);
+        newLinkedList.root = testNode;
+        testNode.next = testNodeTwo;
+        assertEquals(2, newLinkedList.size());
+    }
+
     @Test
     public void insert_buildList() {
         LinkedList newLinkedList = new LinkedList();
@@ -16,6 +27,12 @@ public class LinkedListTest {
         newLinkedList.printList();
         assertEquals(4, newLinkedList.size());
 
+    }
+
+    @Test
+    public void isEmpty_test() {
+        LinkedList newLinkedList = new LinkedList();
+        assertTrue(newLinkedList.isEmpty());
     }
 
     @Test
