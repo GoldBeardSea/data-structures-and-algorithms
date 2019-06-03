@@ -6,6 +6,7 @@ public class BinarySearch {
             System.out.println("The Array is Empty");
             return -1;
         }
+
         int start = 0;
         int end = sortedArray.length - 1;
         while (start <= end) {
