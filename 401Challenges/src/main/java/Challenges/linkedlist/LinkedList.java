@@ -5,6 +5,7 @@ public class LinkedList {
 
     public ListNode root;
     public ListNode current;
+    public ListNode temp;
 
     public LinkedList() {
         this.root = null;
@@ -18,10 +19,12 @@ public class LinkedList {
         int total = 0;
 
         current = this.root;
+
         while (current != null) {
             total++;
             current = current.next;
         }
+
         return total;
     }
 
@@ -36,6 +39,7 @@ public class LinkedList {
         while (current.next != null) {
             current = current.next;
         }
+
         current.next = newNodeValue;
         return newNodeValue;
     }
@@ -48,8 +52,10 @@ public class LinkedList {
             while (current.data != inListVal) {
                 current = current.next;
             }
+
             newValue.next = current.next;
             current.next = newValue;
+
         } catch (NullPointerException e) {
             System.out.println("End of the List.");
         }
@@ -63,13 +69,15 @@ public class LinkedList {
             System.out.println("Empty list");
             return;
         }
+
         if (this.root.data == inListVal){
-            this.appends(inListVal);
+            this.insert(insertVal);
         }
 
         while (current.next !=null && current.next.data != inListVal) {
             current = current.next;
         }
+
         insertedNode.next = current.next;
         current.next = insertedNode;
     }
@@ -86,12 +94,14 @@ public class LinkedList {
             System.out.println("Linked List is empty");
             return seen;
         }
+
         ListNode iterator = root;
         while (iterator != null) {
             if (iterator.data == val) {
                 seen = true;
                 return seen;
             }
+
             iterator = iterator.next;
         }
 
@@ -102,21 +112,28 @@ public class LinkedList {
         StringBuilder theBuilder = new StringBuilder();
         if (root == null) {
             theBuilder.append("< Null >");
+
             return theBuilder.toString();
         } else {
             ListNode temp = root;
             theBuilder.append("<");
+            
             while (temp != null) {
                 if (temp == this.root) {
-                    String insert = "[" + temp.data + "]" + "-->";
+                    String insert = "[" + temp.data + "]" + " --> ";
                     theBuilder.append(insert);
                 } else {
-                    System.out.print("[" + temp.data + "]");
-                    System.out.print("-->");
+                    String insert = "[" + temp.data + "] --> ";
+                    theBuilder.append(insert);
+
                 }
+
                 temp = temp.next;
             }
-            System.out.println("[end]>");
+
+            String theEnd = "[end]>";
+            theBuilder.append(theEnd);
+            return theBuilder.toString();
         }
     }
 

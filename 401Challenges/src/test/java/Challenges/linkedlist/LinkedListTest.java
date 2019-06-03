@@ -82,14 +82,19 @@ public class LinkedListTest {
     }
 
     @Test
-    public void insert() {
-    }
-
-    @Test
-    public void contains() {
-    }
-
-    @Test
     public void printList() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(10);
+        testLinkedList.appends(100);
+        testLinkedList.appends(10000);
+        testLinkedList.appends(100000);
+        testLinkedList.appends(1000000);
+        testLinkedList.insertBefore(10000, 1000);
+        testLinkedList.insertAfter(1000000, 10000000);
+        testLinkedList.insertBefore(10, 1);
+        String actual = testLinkedList.printList();
+        String test = "<[1] --> [10] --> [100] --> [1000] --> [10000] --> [100000] --> [1000000] --> [10000000] --> [1] --> [end]>";
+        assertEquals(test, actual);
+
     }
 }
