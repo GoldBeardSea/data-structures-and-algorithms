@@ -117,7 +117,7 @@ public class LinkedList {
         } else {
             ListNode temp = root;
             theBuilder.append("<");
-            
+
             while (temp != null) {
                 if (temp == this.root) {
                     String insert = "[" + temp.data + "]" + " --> ";
