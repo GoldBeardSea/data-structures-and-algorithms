@@ -11,4 +11,4 @@ The approach to both is similar, initiate a while loop starting at the head of t
 ![alt text](https://raw.githubusercontent.com/GoldBeardSea/data-structures-and-algorithms/master/assets/llinsertions.jpg "White Board")
 ![alt text](https://raw.githubusercontent.com/GoldBeardSea/data-structures-and-algorithms/master/assets/llinsertions.jpg "White Board 2")
 
-[Code] (https://github.com/GoldBeardSea/data-structures-and-algorithms/tree/master/401Challenges/src/main/java/Challenges/linkedlist)
+[Code](https://github.com/GoldBeardSea/data-structures-and-algorithms/tree/master/401Challenges/src/main/java/Challenges/linkedlist)
