@@ -18,6 +18,12 @@ public class LinkedListTest {
     }
 
     @Test
+    public void size_testEmpty() {
+        LinkedList newLinkedList = new LinkedList();
+        assertEquals(0, newLinkedList.size());
+    }
+
+    @Test
     public void insert_buildList() {
         LinkedList newLinkedList = new LinkedList();
         newLinkedList.insert(1);
@@ -33,6 +39,13 @@ public class LinkedListTest {
     public void isEmpty_test() {
         LinkedList newLinkedList = new LinkedList();
         assertTrue(newLinkedList.isEmpty());
+        newLinkedList.insert(1);
+    }
+
+    @Test
+    public void isEmpty_testNotEmpty() {
+        LinkedList newLinkedList = new LinkedList();
+        assertFalse(newLinkedList.isEmpty());
     }
 
     @Test
@@ -99,7 +112,7 @@ public class LinkedListTest {
     }
 
     @Test
-    public void printList() {
+    public void printList_test() {
         LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
@@ -114,4 +127,15 @@ public class LinkedListTest {
         assertEquals(test, actual);
 
     }
+    @Test
+    public void printList_testEmpty() {
+        LinkedList testLinkedList = new LinkedList();
+        String actual = testLinkedList.printList();
+        String test = "<Null>";
+        assertTrue(testLinkedList.isEmpty());
+        assertEquals(test, actual);
+        System.out.println(actual);
+    }
+
+
 }
