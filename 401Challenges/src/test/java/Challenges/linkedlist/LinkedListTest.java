@@ -83,6 +83,7 @@ public class LinkedListTest {
         testLinkedList.appends(1000000);
         testLinkedList.insertBefore(10000, 1000);
         testLinkedList.printList();
+        System.out.println(testLinkedList.printList());
     }
 
     @Test

@@ -2,7 +2,7 @@
 package Challenges.linkedlist;
 
 public class LinkedList {
-    
+
     public ListNode root;
     public ListNode current;
     public ListNode temp;
@@ -81,7 +81,7 @@ public class LinkedList {
             return theBuilder.toString();
         }
     }
-
+    //insertions
     public ListNode appends(int newValue) {
         ListNode newNodeValue = new ListNode(newValue);
         current = root;
