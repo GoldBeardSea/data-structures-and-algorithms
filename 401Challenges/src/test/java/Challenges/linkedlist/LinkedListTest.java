@@ -110,6 +110,7 @@ public class LinkedListTest {
         testLinkedList.insertBefore(10000, 1000);
         testLinkedList.contains(1000);
         assertFalse(testLinkedList.contains(12));
+        System.out.println(testLinkedList.printList());
     }
 
     @Test
@@ -138,5 +139,60 @@ public class LinkedListTest {
         System.out.println(actual);
     }
 
+
+    // kth tests
+    @Test(expected = NullPointerException.class)
+    public void kthFromEnd_test_emptyList() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.kthFromEnd(5);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void kthFromEnd_test_kthLonger() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(5);
+        testLinkedList.kthFromEnd(5);
+    }
+
+    @Test
+    public void kthFromEnd_test_exactLength() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(10);
+        testLinkedList.appends(100);
+        testLinkedList.appends(1000);
+        testLinkedList.appends(10000);
+        testLinkedList.appends(100000);
+        assertEquals(10, testLinkedList.kthFromEnd(5));
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void kthFromEnd_test_negative() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(10);
+        testLinkedList.appends(100);
+        testLinkedList.appends(1000);
+        testLinkedList.appends(10000);
+        testLinkedList.appends(100000);
+        testLinkedList.kthFromEnd(-5);
+    }
+
+    @Test
+    public void kthFromEnd_test_oneOne() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(5);
+        testLinkedList.kthFromEnd(1);
+        assertEquals(5, testLinkedList.kthFromEnd(1));
+    }
+    @Test
+    public void kthFromEnd_test_happy() {
+        LinkedList testLinkedList = new LinkedList();
+        testLinkedList.insert(10);
+        testLinkedList.appends(100);
+        testLinkedList.appends(1000);
+        testLinkedList.appends(10000);
+        testLinkedList.appends(100000);
+        testLinkedList.kthFromEnd(3);
+        assertEquals(1000, testLinkedList.kthFromEnd(3));
+    }
 
 }
