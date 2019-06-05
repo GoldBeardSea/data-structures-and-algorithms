@@ -4,8 +4,6 @@ package Challenges.linkedlist;
 public class LinkedList {
 
     public ListNode root;
-    public ListNode current;
-    public ListNode temp;
 
     public LinkedList() {
         this.root = null;
@@ -17,7 +15,7 @@ public class LinkedList {
 
     public int size() {
         int total = 0;
-        current = root;
+        ListNode current = root;
 
         while (current != null) {
             total++;
@@ -60,7 +58,7 @@ public class LinkedList {
 
             return theBuilder.toString();
         } else {
-            temp = root;
+            ListNode temp = root;
             theBuilder.append("<");
 
             while (temp != null) {
@@ -82,12 +80,12 @@ public class LinkedList {
         }
     }
     //insertions
-    public ListNode appends(int newValue) {
+    public void appends(int newValue) {
         ListNode newNodeValue = new ListNode(newValue);
-        current = root;
+        ListNode current = root;
         if(current == null){
             current = newNodeValue;
-            return current;
+            return;
         }
 
         while (current.next != null) {
@@ -95,12 +93,12 @@ public class LinkedList {
         }
 
         current.next = newNodeValue;
-        return newNodeValue;
+        return;
     }
 
     public void insertAfter(int inListVal, int insertVal) {
         ListNode newValue = new ListNode(insertVal);
-        current = root;
+        ListNode current = root;
         if(root == null){
             System.out.println("Empty list");
             return;
@@ -118,7 +116,7 @@ public class LinkedList {
 
     public void insertBefore(int inListVal, int insertVal) {
         ListNode insertedNode = new ListNode(insertVal);
-        current = root;
+        ListNode current = root;
 
         if(root == null){
             System.out.println("Empty list");
@@ -132,9 +130,29 @@ public class LinkedList {
         while (current.next !=null && current.next.data != inListVal) {
             current = current.next;
         }
-
         insertedNode.next = current.next;
         current.next = insertedNode;
+    }
+
+    public int kthFromEnd(int kth) {
+        int length = 0;
+        ListNode current = root;
+        if (root == null || kth < 0) {
+            throw new NullPointerException("The linked list you want to call the method on is empty");
+        }
+        while (current != null) {
+            current = current.next;
+            length++;
+        }
+        if (length < kth) {
+            throw new IllegalArgumentException("Kth must be larger than the list");
+        }
+        current = root;
+        for (int i = 1; i < length - kth + 1; i++) {
+            current = current.next;
+        }
+
+        return current.data;
     }
 
 }
