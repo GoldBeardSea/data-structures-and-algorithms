@@ -10,4 +10,4 @@ Handle for illegal exception of null pointers before the start of the list, then
 ## Solution
 [Code](https://github.com/GoldBeardSea/data-structures-and-algorithms/tree/master/401Challenges/src/main/java/Challenges/linkedlist)
 
-![alt text](https://raw.githubusercontent.com/GoldBeardSea/data-structures-and-algorithms/master/assets/kthFromEnd.jpg "White Board")
+![alt text](https://raw.githubusercontent.com/GoldBeardSea/data-structures-and-algorithms/master/assets/kthfromend.jpg "White Board")

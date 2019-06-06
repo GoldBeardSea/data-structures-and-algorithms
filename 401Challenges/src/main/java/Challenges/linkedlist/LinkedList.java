@@ -52,7 +52,7 @@ public class LinkedList {
     }
 
     public String printList() {
-        StringBuilder theBuilder = new StringBuilder();
+         StringBuilder theBuilder = new StringBuilder();
         if (root == null) {
             theBuilder.append("<Null>");
 
@@ -153,6 +153,48 @@ public class LinkedList {
         }
 
         return current.data;
+    }
+
+    //merge
+    public static LinkedList mergeList (LinkedList one, LinkedList two) {
+        if (one.isEmpty() && two.isEmpty()) {
+            throw new NullPointerException("These lists are empty");
+        }
+
+        if (one.root == null && two.root != null) {
+            System.out.println("Warning: The First Linked List Argument is Empty returning Second List");
+            return two;
+        }
+        if (two.root == null && one.root != null) {
+            System.out.println("Warning: The Second Linked List Argument is Empty returning First List");
+            return one;
+        }
+
+        ListNode first = one.root;
+        ListNode firstTemp = first.next;
+
+        ListNode second = two.root;
+        ListNode secondTemp = second.next;
+
+        if (firstTemp == null) {
+            first.next = second;
+            return one;
+        }
+
+        while (firstTemp != null && secondTemp != null) {
+            first.next = second;
+            second.next = firstTemp;
+            first = firstTemp;
+            second = secondTemp;
+            firstTemp = firstTemp.next;
+            secondTemp = secondTemp.next;
+        }
+
+        if (second.next == null) {
+            first.next = second;
+            second.next = firstTemp;
+        }
+        return one;
     }
 
 }
