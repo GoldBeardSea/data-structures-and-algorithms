@@ -1,15 +1,21 @@
 package Challenges.linkedlist;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
-
+    LinkedList newLinkedList;
+    LinkedList testLinkedList;
+    @Before
+    public void initialized() {
+        newLinkedList = new LinkedList();
+        testLinkedList = new LinkedList();
+    }
 
     @Test
     public void size_test() {
-        LinkedList newLinkedList = new LinkedList();
         ListNode testNode = new ListNode(8);
         ListNode testNodeTwo = new ListNode(9);
         newLinkedList.root = testNode;
@@ -19,13 +25,11 @@ public class LinkedListTest {
 
     @Test
     public void size_testEmpty() {
-        LinkedList newLinkedList = new LinkedList();
         assertEquals(0, newLinkedList.size());
     }
 
     @Test
     public void insert_buildList() {
-        LinkedList newLinkedList = new LinkedList();
         newLinkedList.insert(1);
         newLinkedList.insert(2);
         newLinkedList.insert(3);
@@ -37,20 +41,17 @@ public class LinkedListTest {
 
     @Test
     public void isEmpty_test() {
-        LinkedList newLinkedList = new LinkedList();
         assertTrue(newLinkedList.isEmpty());
-        newLinkedList.insert(1);
     }
 
     @Test
     public void isEmpty_testNotEmpty() {
-        LinkedList newLinkedList = new LinkedList();
+        newLinkedList.insert(1);
         assertFalse(newLinkedList.isEmpty());
     }
 
     @Test
     public void appends_testInsertAndAppend() {
-        LinkedList newLinkedList = new LinkedList();
         newLinkedList.insert(10);
         newLinkedList.appends(-10);
         newLinkedList.appends(-15);
@@ -62,7 +63,6 @@ public class LinkedListTest {
 
     @Test
     public void insertAfter_test() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
         testLinkedList.appends(10000);
@@ -75,7 +75,6 @@ public class LinkedListTest {
 
     @Test
     public void insertBefore_test() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
         testLinkedList.appends(10000);
@@ -88,7 +87,6 @@ public class LinkedListTest {
 
     @Test
     public void contains_Contains() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
         testLinkedList.appends(10000);
@@ -101,7 +99,6 @@ public class LinkedListTest {
 
     @Test
     public void contains_DoesNotContain() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
         testLinkedList.appends(10000);
@@ -115,7 +112,6 @@ public class LinkedListTest {
 
     @Test
     public void printList_test() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
         testLinkedList.appends(10000);
@@ -131,7 +127,6 @@ public class LinkedListTest {
     }
     @Test
     public void printList_testEmpty() {
-        LinkedList testLinkedList = new LinkedList();
         String actual = testLinkedList.printList();
         String test = "<Null>";
         assertTrue(testLinkedList.isEmpty());
@@ -143,20 +138,17 @@ public class LinkedListTest {
     // kth tests
     @Test(expected = NullPointerException.class)
     public void kthFromEnd_test_emptyList() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.kthFromEnd(5);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void kthFromEnd_test_kthLonger() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(5);
         testLinkedList.kthFromEnd(5);
     }
 
     @Test
     public void kthFromEnd_test_exactLength() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
         testLinkedList.appends(1000);
@@ -167,7 +159,6 @@ public class LinkedListTest {
 
     @Test(expected = NullPointerException.class)
     public void kthFromEnd_test_negative() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
         testLinkedList.appends(1000);
@@ -178,14 +169,12 @@ public class LinkedListTest {
 
     @Test
     public void kthFromEnd_test_oneOne() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(5);
         testLinkedList.kthFromEnd(1);
         assertEquals(5, testLinkedList.kthFromEnd(1));
     }
     @Test
     public void kthFromEnd_test_happy() {
-        LinkedList testLinkedList = new LinkedList();
         testLinkedList.insert(10);
         testLinkedList.appends(100);
         testLinkedList.appends(1000);
@@ -193,6 +182,96 @@ public class LinkedListTest {
         testLinkedList.appends(100000);
         testLinkedList.kthFromEnd(3);
         assertEquals(1000, testLinkedList.kthFromEnd(3));
+    }
+
+    @Test
+    public void mergeList_test_evenSteven() {
+        testLinkedList.insert(10);
+        testLinkedList.appends(100);
+        testLinkedList.appends(1000);
+        testLinkedList.appends(10000);
+
+        newLinkedList.insert(20);
+        newLinkedList.appends(200);
+        newLinkedList.appends(2000);
+        newLinkedList.appends(20000);
+
+        LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
+        assertEquals(8, merged.size());
+        assertEquals(20, merged.root.next.data);
+        System.out.println(merged.printList());
+
+
+    }
+
+    @Test
+    public void mergeList_test_OneBigger() {
+        testLinkedList.insert(10);
+        testLinkedList.appends(100);
+        testLinkedList.appends(1000);
+        testLinkedList.appends(10000);
+
+        newLinkedList.insert(20);
+        newLinkedList.appends(200);
+        LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
+        System.out.println(merged.printList());
+        assertEquals(6, merged.size());
+    }
+
+    @Test
+    public void mergeList_test_TwoBigger() {
+        testLinkedList.insert(10);
+        testLinkedList.appends(100);
+        testLinkedList.appends(1000);
+        testLinkedList.appends(10000);
+
+
+        newLinkedList.insert(20);
+        newLinkedList.appends(200);
+        LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
+        System.out.println(merged.printList());
+        assertEquals(6, merged.size());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void mergeList_test_Empty() {
+        LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
+    }
+
+    @Test
+    public void mergeList_test_TwoEmpty() {
+        testLinkedList.insert(10);
+        LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
+        assertEquals(1, merged.size());
+    }
+
+    @Test
+    public void mergeList_test_OneEmpty() {
+        newLinkedList.insert(10);
+        LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
+        assertEquals(1, merged.size());
+    }
+
+    @Test
+    public void mergeList_test_EdgeCaseSmallOne() {
+        newLinkedList.insert(2);
+        newLinkedList.appends(3);
+
+        testLinkedList.insert(1);
+        LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
+        assertEquals(3, merged.size());
+        System.out.println(merged.printList());
+    }
+
+    @Test
+    public void mergeList_test_EdgeCaseSmallTwo() {
+        newLinkedList.insert(2);
+
+        testLinkedList.insert(1);
+        testLinkedList.appends(3);
+        LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
+        assertEquals(3, merged.size());
+        System.out.println(merged.printList());
     }
 
 }

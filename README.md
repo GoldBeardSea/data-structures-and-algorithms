@@ -14,3 +14,5 @@ Outline for this TBD
 
 [Kth from End Linked List](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/kthFromEnd.md)
 
+[Merge](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/merge.md)
+
