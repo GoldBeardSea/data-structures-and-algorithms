@@ -259,8 +259,9 @@ public class LinkedListTest {
 
         testLinkedList.insert(1);
         LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
-        assertEquals(3, merged.size());
         System.out.println(merged.printList());
+        assertEquals(3, merged.size());
+
     }
 
     @Test
@@ -272,6 +273,16 @@ public class LinkedListTest {
         LinkedList merged = LinkedList.mergeList(testLinkedList, newLinkedList);
         assertEquals(3, merged.size());
         System.out.println(merged.printList());
+    }
+
+    @Test
+    public void sizeRecurisve_test() {
+        newLinkedList.insert(5);
+        newLinkedList.appends(10);
+        newLinkedList.appends(15);
+        newLinkedList.appends(20);
+        newLinkedList.sizeRecursive();
+        assertEquals(4, newLinkedList.sizeRecursive());
     }
 
 }

@@ -25,6 +25,38 @@ public class LinkedList {
         return total;
     }
 
+    private int sizeRecursive(ListNode node) {
+        if (node == null) {
+            return 0;
+        } else {
+            return 1 + sizeRecursive(node.next);
+        }
+    }
+
+    public int sizeRecursive() {
+        return (sizeRecursive(this.root));
+    }
+
+    private int sum(ListNode node) {
+        if (node == null) {
+            return 0;
+        } else {
+            return node.data + sum(node.next);
+        }
+    }
+
+    public int sum() {
+        return sum(this.root);
+    }
+
+    public int max(ListNode node) {
+        if (node == null) {
+            return Integer.MIN_VALUE;
+        } else {
+            return Math.max(node.data, max(node.next));
+        }
+    }
+
     public void insert(int data) {
         ListNode newNode = new ListNode(data);
         newNode.next = root;

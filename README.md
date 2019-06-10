@@ -16,3 +16,5 @@ Outline for this TBD
 
 [Merge](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/merge.md)
 
+[Stacks and Queues](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/StacksAndQueues.md)
+
