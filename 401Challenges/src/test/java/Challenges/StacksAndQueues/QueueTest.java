@@ -35,9 +35,9 @@ public class QueueTest {
         testQueueTwo.enqueue(25);
         testQueueTwo.enqueue(5);
         testQueueTwo.enqueue(-10);
-        assertEquals(5, testQueue.peek());
-        assertEquals(15, testQueueTwo.peek());
-        assertEquals(-10, testQueueTwo.peekRear());
+        assertEquals((Integer) 5, testQueue.peek());
+        assertEquals((Integer) 15, testQueueTwo.peek());
+        assertEquals((Integer) (-10), testQueueTwo.peekRear());
     }
 
     @Test
@@ -51,9 +51,12 @@ public class QueueTest {
         assertEquals(15, testQueueTwo.dequeue());
         testQueueTwo.dequeue();
         testQueueTwo.dequeue();
-        // should pop 15;
         assertEquals(-10, testQueueTwo.dequeue());
         assertTrue(testQueue.isEmpty());
+        testQueueTwo.enqueue(5);
+        assertFalse(testQueueTwo.isEmpty());
+        assertEquals(5, testQueueTwo.dequeue());
+
     }
 
     @Test(expected = NullPointerException.class)
@@ -67,7 +70,7 @@ public class QueueTest {
         testQueueTwo.enqueue(10000);
         testQueue.enqueue(10);
         testQueue.enqueue(15);
-        assertEquals(10000, testQueueTwo.peek());
-        assertEquals(10, testQueue.peek());
+        assertEquals((Integer) 10000, testQueueTwo.peek());
+        assertEquals((Integer) 10, testQueue.peek());
     }
 }
