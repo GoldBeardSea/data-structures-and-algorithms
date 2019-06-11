@@ -18,3 +18,5 @@ Outline for this TBD
 
 [Stacks and Queues](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/StacksAndQueues.md)
 
+
+[Pseudoqueue with two Stack](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/QueueWithStacks.md)
