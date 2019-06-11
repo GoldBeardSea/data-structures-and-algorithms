@@ -36,11 +36,11 @@ public class Queue {
         return result;
     }
 
-    public int peek() {
+    public Integer peek() {
         return front.getData();
     }
 
-    public int peekRear() {
+    public Integer peekRear() {
         return rear.getData();
     }
 }
