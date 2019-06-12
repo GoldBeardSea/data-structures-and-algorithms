@@ -1,9 +1,9 @@
 package Challenges.StacksAndQueues;
 
-public class Stack {
+public class Stack <T> {
 
 
-    public Node top;
+    public Node<T> top;
 
     public Stack() {
         top = null;
@@ -13,22 +13,22 @@ public class Stack {
         return this.top == null;
     }
 
-    public void push(int insertVal) {
+    public void push(T insertVal) {
         Node addToList = new Node(insertVal);
         addToList.next = top;
         this.top = addToList;
     }
 
-    public int pop() {
+    public T pop() {
         if (isEmpty()) {
             throw new NullPointerException("Stack is Empty");
         }
-        int poppedVal = top.getData();
+        T poppedVal = top.getData();
         top = top.next;
         return poppedVal;
     }
 
-    public int peek() {
+    public T peek() {
         return top.getData();
     }
 }
