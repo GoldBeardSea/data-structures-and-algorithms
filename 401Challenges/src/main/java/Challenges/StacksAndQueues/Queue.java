@@ -1,8 +1,8 @@
 package Challenges.StacksAndQueues;
 
-public class Queue {
-    public Node front;
-    public Node rear;
+public class Queue <T> {
+    public Node <T> front;
+    public Node <T> rear;
 
     public Queue() {
         this.front = null;
@@ -13,7 +13,7 @@ public class Queue {
         return this.front == null;
     }
 
-    public void enqueue (int dataInsert) {
+    public void enqueue (T dataInsert) {
         Node inserted = new Node(dataInsert);
         if (this.front == null) {
             inserted.next = null;
@@ -25,22 +25,22 @@ public class Queue {
         }
     }
 
-    public int dequeue () {
+    public T dequeue () {
         if (isEmpty()) {
             throw new NullPointerException("The Queue is Empty");
         }
-        int result = this.peek();
+        T result = this.peek();
         Node tempNode = this.front;
         this.front = this.front.next;
         tempNode.next = null;
         return result;
     }
 
-    public Integer peek() {
+    public T peek() {
         return front.getData();
     }
 
-    public Integer peekRear() {
+    public T peekRear() {
         return rear.getData();
     }
 }
