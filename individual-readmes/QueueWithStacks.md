@@ -14,6 +14,6 @@ I dequeue putting all vals into the second stack, popping off to grab that value
 To create the class I created two stacks using my stack class. I also make a getter method to test the first stack which is the stack I operate on. 
 
 ## Solution
-[Code](https://github.com/GoldBeardSea/data-structures-and-algorithms/tree/master/401Challenges/src/main/java/Challenges/linkedlist)
+[Code](https://github.com/GoldBeardSea/data-structures-and-algorithms/tree/master/401Challenges/src/main/java/Challenges/)
 
 ![alt text](https://raw.githubusercontent.com/GoldBeardSea/data-structures-and-algorithms/master/assets/queuewithstacks.jpg "White Board")

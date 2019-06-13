@@ -22,3 +22,5 @@ Outline for this TBD
 [Pseudoqueue with two Stack](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/QueueWithStacks.md)
 
 [Animal Shelter FIFO](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/animalshelter.md)
+
+[Multi Bracket Validator](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/MultiBracketValidator.md)
