@@ -24,3 +24,6 @@ Outline for this TBD
 [Animal Shelter FIFO](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/animalshelter.md)
 
 [Multi Bracket Validator](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/MultiBracketValidator.md)
+
+[Binary Tree Implementation](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/BinaryTreeImplementation.md)
+
