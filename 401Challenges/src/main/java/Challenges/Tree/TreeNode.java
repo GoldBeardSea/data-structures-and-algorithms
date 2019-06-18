@@ -7,6 +7,8 @@ public class TreeNode <T> {
 
     public TreeNode(T value) {
         this.data = value;
+        this.left = null;
+        this.right = null;
     }
 
     public T getData() {
@@ -25,4 +27,7 @@ public class TreeNode <T> {
         return "" + this.data;
     }
 
+    public void setData(T data) {
+        this.data = data;
+    }
 }

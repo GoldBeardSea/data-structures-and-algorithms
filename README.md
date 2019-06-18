@@ -27,3 +27,5 @@ Outline for this TBD
 
 [Binary Tree Implementation](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/BinaryTreeImplementation.md)
 
+[FizzBuzz in place Binary Tree](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/FizzBuzzTree.md)
+
