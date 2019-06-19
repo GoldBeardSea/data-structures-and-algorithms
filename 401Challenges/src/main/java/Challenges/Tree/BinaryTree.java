@@ -1,6 +1,8 @@
 package Challenges.Tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree <T> {
 
@@ -85,5 +87,28 @@ public class BinaryTree <T> {
             result = (size(treeNode.left) + 1 + size(treeNode.right));
             return result;
         }
+    }
+
+    public ArrayList breadthFirstTraversal() {
+        if (this.root == null) {
+            System.out.println("List is Empty");
+            return null;
+        }
+        Queue<TreeNode> treeNodeQueue = new LinkedList<>();
+        treeNodeQueue.add(root);
+        ArrayList arrayList = new ArrayList();
+        while (!treeNodeQueue.isEmpty()) {
+            TreeNode traversingNode = treeNodeQueue.poll();
+            arrayList.add(traversingNode.data);
+            System.out.print(traversingNode.getData() + " ");
+
+            if (traversingNode.left != null) {
+                treeNodeQueue.add(traversingNode.left);
+            }
+            if (traversingNode.right != null) {
+                treeNodeQueue.add(traversingNode.right);
+            }
+        }
+        return arrayList;
     }
 }

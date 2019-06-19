@@ -81,4 +81,20 @@ public class BinaryTreeTest {
         BinaryTree emptyBT = new BinaryTree();
         assertTrue(emptyBT.preOrder().isEmpty());
     }
+
+    @Test
+    public void test_breadthFirstTraversal() {
+        ArrayList testList = bt.breadthFirstTraversal();
+
+        assertEquals("this should be the final node 7", 7, testList.get(6));
+        assertEquals("this should be the node 4", 4, testList.get(3));
+
+    }
+
+    @Test
+    public void test_breadthFirstTraversalNull() {
+        BinaryTree emptyBT = new BinaryTree();
+        assertNull(emptyBT.breadthFirstTraversal());
+    }
+
 }
