@@ -20,6 +20,7 @@ public class BinaryTreeTest {
         bt.getRoot().left.right = new TreeNode(5);
         bt.getRoot().right.left = new TreeNode(6);
         bt.getRoot().right.right = new TreeNode(7);
+
     }
 
     @Test
@@ -95,6 +96,18 @@ public class BinaryTreeTest {
     public void test_breadthFirstTraversalNull() {
         BinaryTree emptyBT = new BinaryTree();
         assertNull(emptyBT.breadthFirstTraversal());
+    }
+
+    @Test
+    public void test_maxValBinary() {
+        bt.getRoot().right.right.right = new TreeNode(121);
+        assertEquals("this should be 121", 121, bt.findMax());
+    }
+
+    @Test public void test_maxValBinary_string() {
+        BinaryTree string = new BinaryTree("Hello");
+
+        assertEquals("This should be 0", 0, string.findMax());
     }
 
 }

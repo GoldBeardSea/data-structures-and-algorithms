@@ -30,3 +30,5 @@ Outline for this TBD
 [FizzBuzz in place Binary Tree](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/FizzBuzzTree.md)
 
 [Breadth First Binary Tree Traversal](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/bft.md)
+
+[Max Value of a Binary Tree](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/maxvalbt.md)

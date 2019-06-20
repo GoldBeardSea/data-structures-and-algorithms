@@ -111,4 +111,21 @@ public class BinaryTree <T> {
         }
         return arrayList;
     }
+
+    public int findMax() {
+        return findMax(this.root);
+    }
+
+    private int findMax(TreeNode current) {
+        if (current == null || current.data != Integer.class) {
+            System.out.println("Binary Tree is either Empty or not Integers");
+            return 0;
+        }
+        int result = (int) current.getData();
+        int leftTraverse = findMax(current.left);
+        int rightTraverse = findMax(current.right);
+
+        return Math.max(Math.max(result, leftTraverse), rightTraverse);
+    }
+
 }
