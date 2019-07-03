@@ -6,18 +6,7 @@ Compares and inserts values down a line, as if a user looking at one position th
 The complexity takes O(n*m) and O(n) in space as it the array in place.
 
     
-      InsertionSort(int[] arr)
-      
-        FOR i = 1 to arr.length
-        
-          int j <-- i - 1
-          int temp <-- arr[i]
-          
-          WHILE j >= 0 AND temp < arr[j]
-            arr[j + 1] <-- arr[j]
-            j <-- j - 1
-            
-          arr[j + 1] <-- temp
+    
 
 
 
