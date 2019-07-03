@@ -19,7 +19,6 @@ public class Sort {
         return arr;
     }
 
-
     public static void main(String[] args) {
         int[] arr = { 12, 41, 34, 12, 49 };
 
