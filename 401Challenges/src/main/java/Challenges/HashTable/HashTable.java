@@ -62,6 +62,6 @@ public class HashTable {
     }
 
     public boolean contains(String key) {
-        return (get(key) != null);
+        return get(key) != null;
     }
 }

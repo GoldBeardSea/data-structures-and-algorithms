@@ -12,7 +12,6 @@ public class HashTableTest {
         HashTable newTable = new HashTable(500);
         int result = newTable.hash(key);
         assertEquals("hello should be 0", 0, result);
-
     }
 
     @Test
