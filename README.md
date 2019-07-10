@@ -34,3 +34,5 @@ Outline for this TBD
 [Max Value of a Binary Tree](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/maxvalbt.md)
 
 [Hash Table Implementation](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/hashtable.md)
+
+[Repeated Word](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/repeated.md)
