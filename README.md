@@ -36,3 +36,5 @@ Outline for this TBD
 [Hash Table Implementation](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/hashtable.md)
 
 [Repeated Word](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/repeated.md)
+
+[Intersection Two Binary Trees](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/intersection.md)
