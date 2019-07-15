@@ -128,4 +128,22 @@ public class BinaryTree <T> {
         return Math.max(Math.max(result, leftTraverse), rightTraverse);
     }
 
+    public ArrayList doubleThis() {
+        ArrayList loaded = new ArrayList();
+        return doubleThis(loaded, this.root);
+    }
+
+    private ArrayList doubleThis(ArrayList list, TreeNode current) {
+        if (current == null) {
+            return list;
+        }
+        System.out.println(current.data);
+        current.data = ((int)current.data * 2);
+        System.out.println(current.data);
+        preOrder(list, current.left);
+        preOrder(list, current.right);
+
+        return list;
+    }
+
 }

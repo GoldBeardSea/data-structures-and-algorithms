@@ -7,7 +7,7 @@ Given two Binary Trees, return a set of integers that are common between the two
 Given two binary trees return a set of shared values. 
 
 ## Approach & Efficiency
-Right now my approach is O(n+m) Space, I say that because I iterate across both inputted trees then iterate across a newly created set to fill the result set. 
+Right now my approach is O(n) time, I say that because I iterate across both inputted trees then iterate across a newly created set to fill the result set. 
 
 O(n) space. 
 
