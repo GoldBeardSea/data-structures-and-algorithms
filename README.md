@@ -38,3 +38,5 @@ Outline for this TBD
 [Repeated Word](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/repeated.md)
 
 [Intersection Two Binary Trees](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/intersection.md)
+
+[Left Join](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/leftjoin.md)
