@@ -40,3 +40,5 @@ Outline for this TBD
 [Intersection Two Binary Trees](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/intersection.md)
 
 [Left Join](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/leftjoin.md)
+
+[Graph Implementation](https://github.com/GoldBeardSea/data-structures-and-algorithms/blob/master/individual-readmes/graph.md)
