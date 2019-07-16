@@ -1,20 +1,21 @@
 package Challenges.Graph;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class Graph<T> {
 
-    class GraphNode {
-        String label;
-        Integer weight;
-        GraphNode(String label, Integer weight) {
+    class GraphNode<V> {
+        V label;
+        HashSet<Edge> connecting;
+
+        GraphNode(V label) {
             this.label = label;
-            this.weight = weight;
+            this.connecting = new HashSet<>();
         }
+
+
 
         public boolean equals(Object comparison) {
             if (this.getClass() != comparison.getClass()) {
@@ -24,22 +25,29 @@ public class Graph<T> {
             return this.label.equals(((GraphNode) comparison).label);
         }
 
-        public String getLabel() {
+        public V getLabel() {
             return label;
         }
 
-        public void setLabel(String label) {
+        public void setLabel(V label) {
             this.label = label;
         }
 
-        public Integer getWeight() {
-            return weight;
+        public HashMap<GraphNode<V>, Integer> getConnecting() {
+            return connecting;
         }
 
-        public void setWeight(Integer weight) {
-            this.weight = weight;
+        public void setConnecting(HashMap<GraphNode<V>, Integer> connecting) {
+            this.connecting = connecting;
         }
     }
+
+    class Edge {
+        int weight;
+        GraphNode node;
+    }
+
+
 
     private Map<GraphNode, List<GraphNode>> adjacencyList;
 
