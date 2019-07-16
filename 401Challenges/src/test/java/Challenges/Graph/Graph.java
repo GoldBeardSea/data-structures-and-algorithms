@@ -75,4 +75,19 @@ public class Graph<T> {
     public int size() {
         return adjacencyList.size();
     }
+
+    public Set<String> breadthFirstTraversal(Graph graph, String startingNode) {
+    // using baeldung as a guide
+        Set<String> result = new HashSet<>();
+        Queue <String> traversingQueue = new LinkedList<>();
+        traversingQueue.add(startingNode);
+        result.add(startingNode);
+        while(!traversingQueue.isEmpty()){
+            String poppedNode = traversingQueue.poll();
+            for (GraphNode graphNode: graph.adjacencyList) {
+                //need to finish my graphs. 
+            }
+        }
+        return result;
+    }
 }
